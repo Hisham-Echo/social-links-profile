@@ -1,0 +1,108 @@
+@use "../helpers/mixins" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+/* Start Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: color ease-in-out 0.25s, background-color ease-in-out 0.25s;
+    -webkit-transition: color ease-in-out 0.25s,
+        background-color ease-in-out 0.25s;
+    -moz-transition: color ease-in-out 0.25s, background-color ease-in-out 0.25s;
+    -ms-transition: color ease-in-out 0.25s, background-color ease-in-out 0.25s;
+    -o-transition: color ease-in-out 0.25s, background-color ease-in-out 0.25s;
+}
+
+:root {
+    /* ## Colors */
+    /* ### Primary */
+    --Green: hsl(75, 94%, 57%);
+    /* ### Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 20%);
+    --Dark-Grey: hsl(0, 0%, 12%);
+    --Off-Black: hsl(0, 0%, 8%);
+    /* ## Typography */
+    font-family: "Inter", sans-serif; // 467
+    font-size: 14px;
+}
+
+img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+body {
+    background-color: var(--Off-Black, black);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+/* End Global */
+/*Start card */
+.card {
+    min-width: 310px;
+    margin: 15px;
+    padding: 15px 20px;
+    background-color: var(--Dark-Grey, darkgrey);
+    @include c-center();
+    .head {
+        @include c-center();
+        .img {
+            width: 80px;
+            padding: 5px 0 30px;
+            align-self: center;
+        }
+
+        h1 {
+            color: var(--White, white);
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+
+        .location {
+            color: var(--Green, yellowgreen);
+            font-weight: bold;
+        }
+    }
+    //
+    .about {
+        font-size: 0.95rem;
+        margin: 25px 0 15px;
+        color: var(--White, white);
+    }
+    //
+    .links {
+        @include c-center();
+        align-items: stretch;
+        width: 100%;
+        a {
+            width: 100%;
+            margin: 7px 0;
+            color: var(--White, white);
+            text-align: center;
+            padding: 12px 20px;
+            background-color: var(--Grey, grey);
+            text-decoration: none;
+            font-weight: bold;
+            &:hover {
+                color: var(--Dark-Grey, darkgrey);
+                background-color: var(--Green, yellowgreen);
+            }
+            border-radius: 7px;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            -ms-border-radius: 7px;
+            -o-border-radius: 7px;
+        }
+    }
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}

@@ -1,0 +1,7 @@
+// centers elements vertically
+@mixin c-center {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
